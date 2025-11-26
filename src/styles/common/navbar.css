@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: transparent;
-    box-shadow: 0 4px 10px var(--shadow-color);
+    box-shadow: 0 11px 10px var(--shadow-color);
     width: 100%;
     z-index: 99;
 }

@@ -5,7 +5,7 @@ import { BotonNav } from '../utils/BotonNav';
 import { useBackVideo } from '../../hooks/UseBackVideo';
 
 export const SectionLp1 = () => {
-    const videoRef = useBackVideo(0.9);
+    const videoRef = useBackVideo(0.7);
 
     const handleScroll = () => {
         const section2 = document.getElementById('section2');

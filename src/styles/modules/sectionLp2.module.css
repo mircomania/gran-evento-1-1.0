@@ -3,5 +3,6 @@
     align-items: center;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(to left, var(--white-color-2) 0%, var(--white-color) 100%);
     height: 70svh;
 }
