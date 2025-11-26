@@ -1,0 +1,233 @@
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    width: 100%;
+    z-index: 99;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-navbar {
+    user-select: none;
+    pointer-events: none;
+    height: 60px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+/* --------------------------------- MENU HAMBURGESA*/
+
+.burger-menu-icon {
+    display: 'inline-block';
+    top: 12px;
+    right: 20px;
+    color: var(--dark-color);
+    cursor: pointer;
+    z-index: 100;
+    transition: top 0.25s ease, right 0.25s ease, transform 0.25s ease;
+}
+
+.burger-menu-icon.absolute {
+    position: absolute;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.burger-menu-icon.fixed {
+    position: fixed;
+    opacity: 0.95;
+    transform: translateY(2px);
+}
+
+.mobile-nav-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 190px;
+    height: 100%;
+    background: linear-gradient(to left, var(--white-color-2) 0%, var(--white-color) 100%);
+    padding-top: 80px;
+    box-shadow: -4px 0 10px var(--shadow-color);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 99;
+}
+
+.mobile-nav-menu.open {
+    transform: translateX(0);
+}
+
+.mobile-nav-menu ul {
+    list-style: none;
+}
+
+.mobile-nav-menu li {
+    cursor: pointer;
+    user-select: none;
+    text-align: end;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-right: 24px;
+    font-size: 20px;
+}
+
+.container-bajo-mobile {
+    position: absolute;
+    bottom: 20px;
+    right: 10%;
+}
+
+.logo-mobile-menu {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.logo-mobile-menu img {
+    user-select: none;
+    pointer-events: none;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+/* --------- ESTILOS PARA LINKS*/
+
+.menu-nav li a,
+.burger-menu-nav li a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+.menu-nav li a.active,
+.burger-menu-nav li a.active {
+    color: var(--gray-color);
+}
+
+@media (min-width: 576px) {
+    .logo-navbar {
+        margin-left: 30px;
+    }
+
+    /* --------------------------------- MENU HAMBURGESA*/
+
+    .burger-menu-icon {
+        right: 30px;
+    }
+
+    .mobile-nav-menu {
+        width: 220px;
+    }
+
+    .mobile-nav-menu li {
+        margin-right: 34px;
+    }
+
+    .container-bajo-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        align-items: start;
+        padding: 0 50px;
+    }
+
+    .logo-navbar {
+        margin-left: 0px;
+        margin-top: 8px;
+        margin-bottom: 2px;
+    }
+
+    .menu-nav {
+        user-select: none;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        margin-top: 20px;
+        gap: 30px;
+        font-size: 18px;
+    }
+
+    .menu-nav li {
+        letter-spacing: 3px;
+    }
+
+    .menu-nav li a {
+        position: relative;
+        padding-bottom: 5px;
+    }
+
+    .menu-nav li a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--gray-color);
+    }
+
+    .menu-nav li a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--dark-color);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .menu-nav li a:hover::after {
+        transform: scaleX(1);
+    }
+
+    /* --------- ESTILOS PARA LINKS*/
+
+    .menu-nav li a:hover {
+        filter: drop-shadow(0px 0px 0.1px var(--dark-color));
+    }
+
+    .menu-nav li a.active:hover {
+        filter: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar {
+        padding: 0 100px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .navbar {
+        padding: 0 200px;
+    }
+
+    .logo-navbar {
+        height: 80px;
+        margin-top: 10px;
+        margin-bottom: 4px;
+    }
+
+    .menu-nav {
+        gap: 50px;
+        font-size: 20px;
+    }
+}

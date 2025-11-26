@@ -1,0 +1,22 @@
+@import url('../src/styles/common/fuentes.css');
+@import url('../src/styles/common/variables.css');
+@import url('../src/styles/common/navbar.css');
+@import url('../src/styles/common/cargando.css');
+@import url('../src/styles/common/animaciones.css');
+@import url('../src/styles/common/footer.css');
+@import url('../src/styles/common/botones.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background: linear-gradient(to left, var(--white-color-2) 0%, var(--white-color) 100%);
+}
+
+html {
+    scrollbar-gutter: stable;
+}
